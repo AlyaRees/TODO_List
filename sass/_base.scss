@@ -1,6 +1,6 @@
 $default-font-color: #000;
 $background-color: rgb(224, 184, 206);
-$container-bgcolor: whitesmoke;
+$container-bgcolor: white;
 $container-bordercolor: black;
 $textbox-bordercolor: lightgrey;
 $button-textcolor: white;
@@ -10,20 +10,20 @@ $clear-button-color: #9f6060;
 
 
 @mixin mq($size) {
-@media only screen and (min-width: size) {
-    @content;
-}
+    @media only screen and (min-width: $size) {
+        @content;
+    }
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-    font-size: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    font-size: 16px;
+    font-family: 'Ruda', 'Lucida Sans Unicode';
     color: $default-font-color;
     width: 100%;
     min-width: 100%;
@@ -35,8 +35,6 @@ html, body {
 body {
     padding: 20px;
     background-color: $background-color;
-    background-size: cover;
-    background-position: center;
 }
 
 section {
